@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AdOptimizePro</title>
+</head>
+<body>
+  <h1>Ad List</h1>
+  <ul>
+    {% for ad in object_list %}
+      <li>{{ ad.name }} ({{ ad.platform }}) - ${{ ad.budget }} budget, ${{ ad.spend }} spent, {{ ad.clicks }} clicks, {{ ad.conversions }} conversions</li>
+    {% empty %}
+      <li>No ads found.</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
